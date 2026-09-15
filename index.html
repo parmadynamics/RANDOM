@@ -291,7 +291,7 @@ footer{
 <header>
   <div class="top-pill"><span class="dot"></span> ENACTUS • RANDOM CHECK <span class="dot"></span></div>
   <h1 class="title">RANDOM <i>PICKER</i> !!</h1>
-  <div class="subtitle">⚡ TAP ANYWHERE • 19 TEAMS • 1 PICK AT A TIME • NO REPEAT ⚡</div>
+  <div class="subtitle">⚡ TAP ANYWHERE • 20 TEAMS • 1 PICK AT A TIME • NO REPEAT ⚡</div>
 </header>
 
 <div class="stage" id="stage">
@@ -310,17 +310,17 @@ footer{
       <div class="brand-emoji" id="emojiBox">🎲</div>
       <div class="brand-name" id="brandName"><span class="placeholder-text">???</span></div>
       <div class="brand-tag" id="brandTag">Click or Tap to Start Randomizing!</div>
-      <div class="placeholder-sub" id="placeholderSub">19 TEAMS INSIDE • NO REPEAT • MAXIMALISM EDITION</div>
+      <div class="placeholder-sub" id="placeholderSub">20 TEAMS INSIDE • NO REPEAT • MAXIMALISM EDITION</div>
     </div>
   </div>
 
   <button class="cta" id="ctaBtn">🎲 TAP TO PICK RANDOM TEAM 🎲</button>
   <div class="hint">💛 No repeat — each team picked only once — <u>tap screen anywhere</u> 💛</div>
-  <div class="counter">Picks done: <b id="pickCount">0</b> / <b id="totalCount">19</b> <span style="opacity:0.6">| Last picked → <b id="lastWinner" style="background:var(--yellow); color:var(--black); border:2px solid var(--black)">—</b></span> <span style="opacity:0.6">| Left: <b id="leftCount">19</b></span></div>
+  <div class="counter">Picks done: <b id="pickCount">0</b> / <b id="totalCount">20</b> <span style="opacity:0.6">| Last picked → <b id="lastWinner" style="background:var(--yellow); color:var(--black); border:2px solid var(--black)">—</b></span> <span style="opacity:0.6">| Left: <b id="leftCount">20</b></span></div>
 </div>
 
 <div class="chips-wrap" id="chipsWrap">
-  <div class="chips-title">✦ ALL 19 TEAMS ✦ <span id="chipsProgress" style="font-family:'Fredoka',sans-serif; font-size:11px; opacity:0.7; letter-spacing:0">0/19 picked</span></div>
+  <div class="chips-title">✦ ALL 20 TEAMS ✦ <span id="chipsProgress" style="font-family:'Fredoka',sans-serif; font-size:11px; opacity:0.7; letter-spacing:0">0/20 picked</span></div>
   <div class="chips" id="chips"></div>
   <button id="resetBtn" style="margin-top:10px; width:100%; background:var(--yellow); border:2.5px solid var(--black); border-radius:100px; padding:6px 10px; font-weight:800; font-size:12px; cursor:pointer; box-shadow:2px 2px 0 var(--black); display:none">↻ RESET / SHUFFLE AGAIN</button>
 </div>
@@ -330,7 +330,7 @@ footer{
 <footer>MADE FOR ENACTUS • YELLOW & BLACK THEME • CARTOON MAXIMALISM • 2026 ✷</footer>
 
 <script>
-// === TEAM DATA (replaces brands) - 19 teams, no repeat ===
+// === TEAM DATA (replaces brands) - 20 teams, no repeat ===
 const teams = [
   { name:"Ninja Hattori", icon:"🥷", color:"#111111", bg:"#FFD600", tag:"Stealth Mode ON!" },
   { name:"Larpers", icon:"🎭", color:"#6D28D9", bg:"#E9D5FF", tag:"Role. Play. Slay!" },
@@ -351,6 +351,7 @@ const teams = [
   { name:"Aditya Bhaskar", icon:"⭐", color:"#9D174D", bg:"#FFE4E6", tag:"Star Power!" },
   { name:"PARADOX", icon:"🌀", color:"#312E81", bg:"#E0E7FF", tag:"Expect The Unexpected!" },
   { name:"Apex", icon:"🚀", color:"#065F46", bg:"#CCFBF1", tag:"To The Apex!" },
+  { name:"SCRATCHERS", icon:"🎰", color:"#7C3AED", bg:"#F3E8FF", tag:"Scratch It To Win It!" },
 ];
 // keep alias for legacy code that still references brands
 const brands = teams;
@@ -492,7 +493,7 @@ async function pickRandom(){
   if(isAnimating) return;
   // if pool empty -> all done
   if(pool.length===0){
-    badge.textContent='✅ ALL 19 TEAMS DONE';
+    badge.textContent='✅ ALL 20 TEAMS DONE';
     badge.style.background='#111';
     ctaBtn.textContent='↻ ALL PICKED — RESET TO RESTART';
     brandTagEl.textContent='All teams have been picked once! Hit RESET.';
@@ -557,7 +558,7 @@ async function pickRandom(){
   }
   badge.style.background='#111';
   if(pool.length===0){
-    ctaBtn.textContent='🎉 '+winner.name.toUpperCase()+' — ALL 19 DONE! 🎉';
+    ctaBtn.textContent='🎉 '+winner.name.toUpperCase()+' — ALL 20 DONE! 🎉';
   } else {
     ctaBtn.textContent='🎉 '+winner.name.toUpperCase()+' PICKED! TAP AGAIN ('+pool.length+' LEFT) 🎉';
   }
